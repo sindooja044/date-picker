@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+</head>
+<body>
+    <div>
+        <style>
+            table{
+                border:5px solid greenyellow;
+                padding:10px;
+            }
+            td{
+                border:5px;
+                padding:5px;          
+              }
+        </style>
+        <table>
+            <tr>
+                <th>s.no</th>
+                <th>name</th>
+                <th>date of birth</th>
+            
+            </tr>
+            <tr>
+                {% for d in hellos %}
+                <td>{{forloop.counter}}</td>
+                <td>{{d.name}}</td>
+                <td>{{d.dob}}</td>
+            </tr>
+                {% endfor %}
+            
+        </table>
+        <h1>hello</h1>
+        {% for hello in hellos %}
+        <h1> {{forloop.counter}}. {{hello.name}} {{hello.dob}}<h1>
+        
+        {% endfor %}
+
+    </div>
+  
+ 
+</body>
+</html>
